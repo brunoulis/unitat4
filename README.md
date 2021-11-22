@@ -77,22 +77,22 @@ int mayor(int a, int b);
   ~~~
 5.Estos tres fincheros contendran variable instruciones y la muestra del resultado por pantalla pero esta dividio en estos ficheros y con el make los compilaremos.
 6. Aqui vemos que el makefile funciona correctamente creando el fichero calc.o para despues ejecutar el calcula con el cual creamos el calcula.o.Despues con el clean podemos borrar los ficheros creados anteriormente.El dist previamente necesitara los objetivos clean y calcula. Las órdenes que realiza son:
-– rm -rf ../dist;: Borra, si existe, la carpeta /dist creada previamente en el directorio
+ rm -rf ../dist;: Borra, si existe, la carpeta /dist creada previamente en el directorio
 superior.
-– mkdir -p ../dist/usr/bin: Crea en el directorio padre del que estamos la ruta /dist/usr/
+ mkdir -p ../dist/usr/bin: Crea en el directorio padre del que estamos la ruta /dist/usr/
 bin
-– cp calcula ../dist/usr/bin/: Copia el ejecutable calcula dentro de la carpeta que hemos
+ cp calcula ../dist/usr/bin/: Copia el ejecutable calcula dentro de la carpeta que hemos
 creado.
-– Con esto, ya tenemos la carpeta creada con los ejecutables.
+ Con esto, ya tenemos la carpeta creada con los ejecutables.
 targz Requierira previamente el objetivo clean. Las órdenes que realiza son:
-– mkdir -p source: Crea la carpeta source en el directorio actual.
-– cp *.c *.h Makefile source: Copia todos los archivos .c, .h y Makefile en la carpeta
+ mkdir -p source: Crea la carpeta source en el directorio actual.
+ cp *.c *.h Makefile source: Copia todos los archivos .c, .h y Makefile en la carpeta
 source que hemos creado.
-– tar -cvf calcula.tar source: Crea el archivo calcula.tar a partir de la carpeta
+ tar -cvf calcula.tar source: Crea el archivo calcula.tar a partir de la carpeta
 source.
-– gzip calcula.tar: Comprimeiz en zip el archivo calcula.tar.
-– rm -rf calcula.tar: Borra el archivo intermedio tar.gz.
-– rm -rf source: Borra el directorio temporal source.
+ gzip calcula.tar: Comprimeiz en zip el archivo calcula.tar.
+ rm -rf calcula.tar: Borra el archivo intermedio tar.gz.
+ rm -rf source: Borra el directorio temporal source.
 
 ~~~git
 make calc.o
