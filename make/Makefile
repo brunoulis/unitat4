@@ -13,9 +13,9 @@ clean:
 	rm calcula
 .PHONY: dist
 dist: clean calcula
- rm -rf ../dist;
- mkdir -p ../dist/usr/bin/calc
- cp calcula ../dist/usr/bin/calc
+	rm -rf ../dist;
+	mkdir -p ../dist/usr/bin/calc
+	cp calcula ../dist/usr/bin/calc
 
 .PHONY: targz
 targz: clean
@@ -27,4 +27,4 @@ targz: clean
 	rm -rf source
 	
 install: dist
-2 cp -r ../dist/* /
+	cp -r ../dist/* /
